@@ -1,0 +1,28 @@
+
+Rooms List
+<table class="table">
+   <tr>
+       <th>Index</th>
+       <th>Even/odd</th>
+       <th>roomType</th>
+       <th>Feature</th>
+       <th>Photos</th>
+       <th>Price</th>
+       <th>CheckIn</th>
+       <th>CheckOut</th>
+   </tr>
+<!-- `       slice pipes -->
+<!-- *ngFor="let room of roomList | slice:0:3; let e=even; let o=odd; let i = index"> -->
+
+   <tr [ngClass]="e?'even':'odd'"
+   *ngFor="let room of rooms | slice:0:3; let e=even; let o=odd; let i = index">
+       <td>{{i | percent}}</td>
+       <td>{{e ? "even" : "odd"}}</td>
+      <td>{{room.roomType}}</td> 
+      <td>{{room.feature | titlecase}}</td> 
+      <td>{{room.photos}}</td> 
+      <td>{{room.price | currency:'INR'}}</td> 
+      <td>{{room.checkIn | date : 'dd/mm/yy'}}</td> 
+      <td>{{room.checkOut}}</td> 
+   </tr>
+</table>

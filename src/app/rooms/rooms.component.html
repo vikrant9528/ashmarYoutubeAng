@@ -1,0 +1,20 @@
+<p>rooms works!</p>
+welcome to {{hotelName}} Hotel
+
+<div [hidden]="hideRooms">number of rooms
+<div [innerText]="numberOfRooms" >
+</div>
+</div>
+<!-- null collision -->
+{{rooms?.availableRoom ?? "no rooms"}}
+
+<!-- json pipe -->
+ <!-- {{roomList | json}} -->
+
+
+<!-- operation chaining -->
+<div *ngIf="rooms.availableRoom>0">
+   <hinv-rooms-list [rooms]="roomList"></hinv-rooms-list>
+</div>
+
+<button (click)="Toogle()"> Toogle </button>

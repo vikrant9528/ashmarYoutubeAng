@@ -1,0 +1,12 @@
+directives in angular js
+..structural directives
+..attribut directives
+*ngif  (* ka mtlab hai structural derective yeh dom mein bhi kardeta hai )
+(jinme * na ho vo hote hai attribute directives aur vo dom mein change nahi karte hai)
+..ngswitch
+..ngClass
+..ngStyle
+
+
+
+nex topic is pipes
